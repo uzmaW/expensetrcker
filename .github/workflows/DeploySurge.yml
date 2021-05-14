@@ -30,7 +30,7 @@ jobs:
         run: sudo yarn build
       
       - name: Install Surge
-        run: sudo yarn add --global surge
+        run: sudo npm install --global surge
 
       - name: Deploy to Surge
         run: surge ./build react-expense-tracker-adil.surge.sh --token ${{ secrets.SURGE_TOKEN }}
